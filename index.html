@@ -1,0 +1,77 @@
+<!--
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AKAI Frontend Task - HTML
+	W tym pliku znajduje się struktura strony z formularzem. Twoim zadaniem jest upiększenie
+	tego formularza. Przeanalizuj poniższy kod. Jego znajomość będzie potrzebna do przerobienia
+	pliku form.css odpowiedzialnego za styl strony. Gdy zapoznasz się ze strukturą strony,
+	przejdź do pliku css/form.css lub js/validation.js po dalsze instrukcje.
+    Powodzenia!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AKAI Frontend Task</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+   
+	<section id="task-frontend" class='card'>
+
+	    <h1 class="title">Formularz rekrutacyjny</h1>
+
+		<form method="POST">
+
+			<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
+
+			<label for="first-name">Imię</label>
+		    <input type="text" id="first-name" class='input' name="name"/>
+            <div class="name-error-message error"></div>
+
+            <label for="last-name">Nazwisko</label>
+		    <input type="text" id="last-name" class='input' name="surname"/>
+            <div class="form-message"></div>
+            <div class="surname-error-message error"></div>
+
+			<label for="email">Email</label>
+		    <input type="email" id="email" class='input'/>
+
+            
+			<span>Sekcje, które Cię interesują:</span>
+            <div class="checkbox-section">
+                <label class="checkbox">
+                    <input type="checkbox" id="frontend-checkbox" name="section" value="frontend">
+                    <span class="checkmark"></span>
+                    frontend
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="backend-checkbox" name="section" value="frontend" >
+                    <span class="checkmark"></span>
+                    backend
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="mobile-checkbox" name="section" value="frontend" >
+                    <span class="checkmark"></span>
+                    mobile
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="graphics-checkbox" name="section" value="frontend" >
+                    <span class="checkmark"></span>
+                    grafika
+                </label>
+            </div>
+            
+           
+
+            <input type="submit" class="button" value="Wyślij">
+		</form>
+
+
+	</section>
+	
+<script type="text/javascript" src="./validation.js"></script>
+
+</body>
+</html>
